@@ -1,0 +1,36 @@
+[  
+  {  
+    "name": "Jack",
+    "From": "Jack@yahoo.com",
+    "To": "mohamed@yahoo.com",
+    "subject": "science",
+    "content": "Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas k Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas kdd", 
+    "read": false,
+    "starred": false ,
+    "time": "5/1/2001 8pm",
+    "id": 1
+  },  
+  {  
+    "name": "mohamed",
+    "From": "mohamed@yahoo.com",
+    "To": "me",
+    "subject": "football",
+    "content": "Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas k Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas kdd", 
+    "read": true,
+    "starred": false ,
+    "time": "5/1/2001 8pm",
+    "id": 2 
+  },
+  {  
+    "name": "hassan",
+    "From": "ksdjdj.com",
+    "To": "shnera",
+    "subject": "football vaoll",
+    "content": "Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas k Hellodjf cfjcf slas kd Hellodjf cfjcf slas kd Hellodjf cfjcf slas kdd", 
+    "read": false,
+    "starred": false ,
+    "time": "5/1/2001 8pm",
+    "id": 3 
+  }
+
+]

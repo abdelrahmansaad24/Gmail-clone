@@ -1,0 +1,30 @@
+<div class="_form" *ngIf="WriteMessage">
+    <div class="header_form">
+        <h4 >New Message</h4>
+        <button class="close" (click)="close()">
+            <img src="../assets/icons/close.png">
+        </button>
+    </div>
+    <form name="message_form">
+        <div class="field">
+            <div>
+                <h1 for="to">
+                    
+                </h1>
+            </div>
+            <input id="to" type="text" formControlName="to">
+        </div>
+        <div class="field">
+            <div>
+                <label for="subject">
+                    Subject:
+                  </label>
+            </div>
+            <input id="subject" type="text" formControlName="subject">
+        </div>
+        <div class="field_content">
+            <textarea id="content" cdkTextareaAutosize formControlName="content"></textarea>
+        </div>
+        <button  class="send_button" type="submit" >Send</button>
+    </form>
+</div>

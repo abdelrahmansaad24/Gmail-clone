@@ -1,0 +1,41 @@
+<body>
+    <div class="main">
+    <b class="" action="">
+      <div class="head">
+        <img src="../assets/images/googlelogo.png" alt="" class="logo">
+        <h3>Create your Google Account</h3>
+      </div>
+      <div class="name">
+        <input type="name" required id="first">
+        <label>First name</label>
+      </div>
+      <div class="name">
+        <input type="name" required id="lname">
+        <label>Last name</label>
+      </div>
+      <div class="user-name">
+        <input type="username" required id="username">
+        <label>Username</label>
+        <span class="gmail">@gmail.com</span>
+      </div>
+      <a class="line1">You can use letters, numbers & periods</a>
+      <div class="pass">
+        <input type="password" class="password" id="pass1" required>
+        <label>Password</label>
+      </div>
+      <div class="pass">
+        <input type="password" class="password" id="pass2" required>
+        <label>Confirm</label>
+        </div>
+        <div class="iconeye">
+      <img src="../assets/images/eyehide.png" (click)="show()" id="eye">
+      </div>
+      <a class="line3">Use 8 or more characters with a mix of letters, numbers & symbols</a>
+      <h4 class="line4" (click)="login()">Sign in instead</h4>
+      <button (click)="submit()">Next</button>
+    </b>
+    <div class="side-image">
+      <img src="../assets/images/sideimage.png" alt="" class="side-logo">
+    </div>
+    </div>
+  </body>

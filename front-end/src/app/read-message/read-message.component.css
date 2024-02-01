@@ -1,0 +1,51 @@
+:host{
+    flex: 1;
+    overflow: scroll;
+    height: 100vh;
+}
+.message{
+    background-color: whitesmoke;
+    padding: 20px;
+    color: rgb(94, 93, 93);
+    height: 100vh;
+}
+.send_button{
+    background-color: rgb(87, 87, 241);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+.message_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.subject{
+    padding: 20px;
+    margin-bottom: 5px;
+    font-size: 40px;
+}
+.left{
+    display: flex;
+    align-items: center;
+}   
+._ab{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h3{
+    color: black;
+    padding-right: 20px;
+}
+
+.content{
+   
+    color: rgb(80, 76, 76);
+    margin: 20px;
+    margin-top: 30px;
+}

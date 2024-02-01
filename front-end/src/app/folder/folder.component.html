@@ -1,0 +1,58 @@
+<div class="emailList">
+  <div class="emailList_setting">
+      <div class="emailList_setting_left">
+          <!-- <select name="priority" id="priority" class="select_priority" #mySelect>
+              <option value = "all">All</option>
+              <option value = "read">Read</option>
+              <option value = "unread">Unread</option>
+              <option value = "important">Starred</option>
+          </select> -->
+          <!-- <button  #simSearch>
+              Search
+          </button> -->
+          <!-- <button >
+              <img src="../assets/icons/refresh.png">
+          </button> -->
+          <!-- <button title="delete" >
+              <img src="../assets/icons/bin2.png">
+          </button> -->
+          <!-- <button title="move to important"  >
+              <img src="../assets/icons/important.png">
+          </button>
+          <button title="mark as read"  >
+              <img src="../assets/icons/mark_email_read.png">
+          </button>
+          <button title="mark as unread" >
+              <img src="../assets/icons/mark_email_unread.png" >
+          </button>
+          <button title="move to folders" >
+            <img src="../assets/icons/important.png" >
+          </button>
+          <select name="sorting" id="sort" class="select_priority" #mySelectSorting >
+              <option value = "none">None</option>
+              <option value = "sortDate">Sort on date</option>
+              <option value = "sortimportance">sort on importance</option>
+          </select> -->
+      </div>
+      <div class="emailList_setting_right">
+      </div>
+  </div>
+
+  <div class="emailList_list">
+      <div class="email_row"   *ngFor="let m of emails"  [ngStyle] = "{'font-weight': (!m.read) ? 'bold' : ''}">
+          <div class="emil_options">
+              <input type="checkbox" >
+              <button>
+                  <img src="../assets/icons/star.png" class="icon" >
+              </button>
+          </div>
+          <h3 class="email_title"  [routerLink] = "['/readMessage', m.name, m.sender, m.receiver, m.subject, m.body, m.date, m.id,m.hasAttachment]" [ngStyle] = "{'font-weight': (!m.read) ? 'bold' : 'lighter'}">{{m.sender}}</h3>
+          <div class="email_row_message" [routerLink] = "['/readMessage', m.name, m.sender, m.receiver, m.subject, m.body, m.date, m.id,m.hasAttachment]">
+              <div class="_content">
+                  {{m.subject}} - {{m.body}}
+              </div>
+              <div class="time">{{m.date}}</div>
+          </div>
+      </div>
+  </div>
+</div>

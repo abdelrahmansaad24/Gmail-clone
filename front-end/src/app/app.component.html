@@ -1,0 +1,175 @@
+<app-log-in-page class="login" *ngIf="login&&!signup"></app-log-in-page>
+<app-signup class="login" *ngIf="signup"></app-signup>
+
+<div class="header" *ngIf="!login">
+    <div class="header_left">
+        <img class="icon menuIcon" src="../assets/icons/menu.png" (click)="openMenu()">
+        <img class="gmailIcon" src="../assets/icons/gmail.png">
+    </div>
+    <div class="header_middle">
+        <img class="icon" src="../assets/icons/search.png">
+
+        <input type = "text" id = "search" placeholder="Search mail">
+
+        <button type="button" class="search_option_icon">
+            <img src="../assets/icons/search_option.png" (click)="openSearchOptions()">
+        </button>
+
+    </div>
+    <div class="header_right">
+        <img class="icon" src="../assets/icons/account.png">
+    </div>
+</div>
+<div class="main_body" *ngIf="!login">
+    <app-sidebar class="sidebar"></app-sidebar>
+    <router-outlet></router-outlet>
+</div>
+<!-- search form start----- -->
+
+<div class="search_form" *ngIf="openSearchFrom">
+    <form [formGroup]="searchFrom" name="search_form">
+        <div class="field">
+            <div>
+                <label for="_from">
+                    From:
+                </label>
+            </div>
+            <input id="_from" type="text" formControlName="from">
+        </div>
+
+        <div class="field">
+            <div >
+                <label for="_to">
+                    To:
+                </label>
+            </div>
+            <input id="_to" type="text" formControlName="to">
+        </div>
+
+        <div class="field">
+            <div>
+                <label for="_subject">
+                    Subject:
+                </label>
+            </div>
+            <input id="_subject" type="text" formControlName="subject">
+        </div>
+        <div class="field">
+          <div>
+              <label for="_body">
+                  Body:
+              </label>
+          </div>
+          <input id="_body" type="text" formControlName="body">
+      </div>
+        <div class="field">
+            <div>
+                <label for="_date">
+                    Date:
+                </label>
+            </div>
+            <input id="_date" type="datetime-local" formControlName="date">
+        </div>
+        <div class="attachment">
+            <input type="checkbox" id = "attach" [(ngModel)]="isChecked" formControlName="attach">
+            <div>
+                <label for="attach">Has attachmet</label>
+            </div>
+        </div>
+        <div class="field">
+          <div>
+            <label for="_importance">Importance</label>
+         </div>
+          <select name="_priority" id="_importance" class="_select_priority">
+            <option value = "5">Very important</option>
+            <option value = "4">important</option>
+            <option value = "3">normal</option>
+            <option value = "2">not important</option>
+            <option value = "1">useless</option>
+          </select>
+      </div>
+
+    </form>
+</div>
+
+<!--search form end---------->
+
+<!--message form start--------------->
+
+<div class="_form" *ngIf="WriteMessage">
+    <div class="header_form">
+        <h4 >New Message</h4>
+        <button class="close" (click)="close()">
+            <img src="../assets/icons/close.png">
+        </button>
+    </div>
+    <form [formGroup]="checkMessageForm" (ngSubmit)="onSubmit()" name="message_form">
+        <div class="field">
+            <div>
+                <label for="to">
+                    To:
+                </label>
+            </div>
+            <input id="to" type="text" formControlName="to">
+        </div>
+        <div class="field">
+            <div>
+                <label for="subject">
+                    Subject:
+                  </label>
+            </div>
+            <input id="subject" type="text" formControlName="subject">
+        </div>
+        <div class="field_content">
+            <textarea id="content" cdkTextareaAutosize formControlName="content"></textarea>
+        </div>
+        <div>
+            <h4>importance :
+                <select name="priority" id="importance" class="select_priority">
+                    <option value = "5">Very important</option>
+                    <option value = "4">important</option>
+                    <option value = "3">normal</option>
+                    <option value = "2">not important</option>
+                    <option value = "1">useless</option>
+                </select>
+            </h4>
+        </div>
+        <button  class="send_button" type="submit" (click)="send()">Send</button>
+    </form>
+    <input type="file" (change)="onFileSelected($event)" id="files" name="files" multiple><br><br>
+</div>
+
+<!--message form end------------------ -->
+
+
+<div class="_form" *ngIf="isAddContact">
+    <div class="header_form">
+        <h4 >Add Contact</h4>
+        <button class="close" (click)="closeContact()">
+            <img src="../assets/icons/close.png">
+        </button>
+    </div>
+    <form [formGroup]="addContactForm" (ngSubmit)="addContact()" name="contact_form">
+        <div class="field">
+            <div>
+                <label for="to">
+                    Name:
+                </label>
+            </div>
+            <input id="to" type="text" formControlName="nameContact">
+        </div>
+        <div class="field">
+            <div>
+                <label for="subject">
+                    Email:
+                  </label>
+            </div>
+            <input id="subject" type="text" formControlName="emailContact">
+        </div>
+        <button  class="send_button" type="submit">ADD</button>
+    </form>
+</div>
+
+
+
+

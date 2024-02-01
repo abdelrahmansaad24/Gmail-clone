@@ -1,0 +1,31 @@
+<div class="emailList">
+    <div class="contactlList_setting">
+        <div class="emailList_setting_left">
+            <button (click)="reload()" title="refresh">
+                <img src="../assets/icons/refresh.png" >
+            </button>
+            <button title="delete" (click)="Delete()">
+                <img src="../assets/icons/bin2.png" >
+            </button>
+            <button title="add" (click)="openAddContactWindow()">
+                <img src="../assets/icons/compose.png" >
+            </button>    
+        </div>
+        <div class="emailList_setting_right">
+        </div>
+    </div>
+
+    <div class="emailList_list">
+        <div class="email_row" *ngFor="let m of contacts">
+            <div class="emil_options">
+                <input type="checkbox" (click)="check(m.userEmail)">
+            </div>
+            <h3 class="email_title">{{m.userName}}</h3>
+            <div class="email_row_message">
+                <div class="_content">
+                    {{m.userEmail}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

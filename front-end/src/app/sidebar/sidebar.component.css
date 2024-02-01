@@ -1,0 +1,99 @@
+.sidebar{
+    flex: 0.3;
+    max-width: 150px;
+    padding-right: 20px;
+
+}
+.sidebar .compose{
+    margin-top: 10px;
+    margin-left: 7px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: rgb(106, 101, 101);
+    padding: 10px;
+    border-radius: 22px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 5px -2px rgba(0,0 ,0 , 0.75);
+}
+.sidebar_option .icon{
+    margin-right: 20px;
+}
+.compose .icon{
+    opacity: 70%;
+    margin-right: 5px;
+    align-self: center;
+}
+
+.sidebar_option{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    opacity: 70%;
+    outline: none;
+    border: none;
+}
+
+.sidebar_option h3{
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sidebar_option:hover, .sidebar_option:hover h3,
+.sidebar_option:hover .icon,
+.active,
+.active h3,
+.active .icon, ._name:hover{
+    background-color: #fcecec;
+    color: #c04b37;
+    font-weight: 800;
+}
+
+.addFolder{
+  margin-top: 0px;
+}
+
+.folders{
+  margin-top: 10px;
+  margin-left: 2px;
+  margin-bottom: 5px;
+}
+
+.folders input{
+  border: 2px solid transparent;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: medium;
+  background-color: whitesmoke;
+  height: 20px;
+  margin-left: 5px;
+}
+
+._folders{
+  width: 100%;
+  margin-bottom: 5px;
+}
+._name{
+  width: 100%;
+  height: 100%;
+  line-height: 2;
+  padding-left: 5px;
+  margin-left: 5px;
+  margin-right: 0px;
+}
+
+.folders-buttons{
+  display: flex;
+}
+

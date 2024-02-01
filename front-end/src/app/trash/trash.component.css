@@ -1,0 +1,85 @@
+:host{
+    flex: 1;
+    overflow: scroll;
+}
+
+.emailList_setting{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid whitesmoke;
+    background-color: white;
+    z-index: 999;
+    padding: 8px;
+}
+.emailList_setting_left{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.emil_options{
+    display: flex;
+    align-items: center;
+}
+h3{
+    font-weight: lighter;
+}
+
+.icon, input{
+    margin: 5px;
+}
+button{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    margin: 10px;
+}
+
+
+.email_row{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid whitesmoke;
+    cursor: pointer;
+    z-index: 999;
+}
+.email_row:hover{
+    border: 1px solid whitesmoke;
+    bottom: 0 4px 4px -2px rgba(0, 0, 0, 0.24);
+}
+.email_row_message{
+    display: flex;
+    flex: 0.8;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    
+}
+._content{
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.email_title{
+    font-size: 20px;
+    flex: 0.3;
+}
+
+.time{
+    padding-right: 15px;
+    font-size: 15px;
+}
+
+button :hover {
+    background-color:rgb(159, 149, 149);
+    color: #c04b37;
+    font-weight: 800;
+    border-radius: 35%;    
+}
